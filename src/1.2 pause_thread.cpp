@@ -27,7 +27,7 @@ void chaves()
     printf("| Chaves thread's id is: %d\n", std::this_thread::get_id());
 
     while (isRunning) {
-        printf("| Foi sem querer queendo... :(\n");
+        printf("| Foi sem querer querendo... :(\n");
         std::this_thread::sleep_for(2s);
     }
 }
