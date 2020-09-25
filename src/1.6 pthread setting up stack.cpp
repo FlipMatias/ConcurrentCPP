@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <pthread.h>
 
 
@@ -14,6 +15,8 @@ static void* doWork(void* thread)
     double a[N][N];
     long tId = (long)thread;
     size_t stacksize;
+
+    sleep(3);
 
     pthread_attr_getstacksize(&attribute, &stacksize);
     printf("| Thread #%ld. Stack size: %li bytes\n", tId, stacksize);
